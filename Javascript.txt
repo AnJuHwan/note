@@ -1,0 +1,41 @@
+window.screen  - 컴퓨터의 사이즈 
+window.outer - 웹의 전체사이즈
+window.inner - 웹의 컨텐츠 사이즈
+document.documentElement.clientWidth , Height - document의 사이즈
+
+Element.getBoundingClientRect(); X , Y 등 좌표를 알려주는 함수
+event.clientX , Y  - 현재 보고있는 웹의 사이즈
+event.pageX , Y - 스크롤되는것까지 포함 사이즈
+
+window.scrollBy(0,100); - y축으로 100만큼 이동
+window.scrollTo(0,100); - 0,100으로 이동
+Element.scrollIntoView(); - element가 있는곳으로 이동
+
+input.focus(); - input에 포커스가 되도록함
+
+
+const section = document.querySelector('section');
+    const h2 = document.createElement('h2'); //<h2></h2> 생성
+    h2.setAttribute('class','title'); //<h2 class="title"> </h2>
+    h2.textContent = 'This is a title'; //<h2 class="title"> This is a title </h2>
+    const h3 = document.querySelector('h3');
+    // section.appendChild(h2); //   section 안에 맨 마지막에 추가됨 append 로도 사용 가능
+    section.insertBefore(h2,h3); // h2를 h3전에 들여옴
+    section.removeChild(h2); //h2를 삭제  
+
+
+Element.style.display ="block" - 스타일을 block으로 바꿈
+Element.classList.toggle ="class" - class를 껏다켰다 가능
+		  add , remove 추가 삭제 
+
+Element.className - 기존 클래스를 없애고 새로운 클래스를 넣음
+
+setInterval 함수 : 일정한 시간 간격으로 작업을 수행하기 위해서 사용합니다.
+clearInterval() 중지
+
+setTimeout 함수 : 일정한 시간 후에 작업을 한번 실행합니다.
+clearTimeout() 중지
+
+fetch('경로') - 데이터를 받아옴
+
+filter - 배열 걸러내기

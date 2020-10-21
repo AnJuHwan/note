@@ -1,0 +1,29 @@
+비쥬얼 스튜디오 코드 익스텐션:
+
+-React-
+- Reactjs code snippets
+
+- Auto Import
+
+*****************************************
+-HTML, CSS-
+ 
+Bracket Pair Colorizer
+
+CSS Peek
+
+HTML CSS Support
+
+HTML to CSS autocompletion
+
+indent-rainbow
+
+Live Server
+
+Material Icon Theme
+
+Prettier - code formatter
+
+Auto Rename Tag
+
+

@@ -1,0 +1,3 @@
+mkdir 파일생성 
+cd desktop\Front-end\React, /가능 경로설정
+dir,ls 파일확인, 

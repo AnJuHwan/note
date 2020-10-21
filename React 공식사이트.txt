@@ -1,0 +1,54 @@
+React: https://reactjs.org/docs/getting-started.html
+
+Create React App: https://create-react-app.dev/docs/getting-started
+
+Introducing JSX: https://reactjs.org/docs/introducing-jsx.html
+
+JSX In Depth: https://reactjs.org/docs/jsx-in-depth.html
+
+브라우저 Event, MDN: https://developer.mozilla.org/en-US/docs/Web/API/Event
+
+리액트 Handling Events: https://reactjs.org/docs/handling-events.html
+
+State and Lifecycle: https://reactjs.org/docs/state-and-lifecycle.html
+
+react 프로젝트 배포 : https://create-react-app.dev/docs/deployment/#netlify
+
+PostCSS: https://postcss.org/
+
+PostCSS Plugins: https://www.postcss.parts/
+
+Post CSS Plugins Github 페이지: https://github.com/postcss/postcss/blob/master/docs/plugins.md
+
+
+
+------------설치--------------
+윈도우용 터미널: https://cmder.net/
+
+NodeJS: https://nodejs.org/en/
+
+Git: https://git-scm.com/downloads
+
+cmd
+사용한 커맨드:
+
+git -v
+
+node -v 
+
+npm -v
+
+npm install yarn --global
+
+yarn -v
+
+폰트오쏨 명령어:
+
+yarn add @fortawesome/fontawesome-free
+
+index.js에 추가해야 하는 코드:
+
+import '@fortawesome/fontawesome-free/js/all.js';
+
+cp -R habit-tracker habit-test
+복사 복사할파일  만들어질 파일이름

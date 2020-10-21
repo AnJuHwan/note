@@ -1,0 +1,224 @@
+﻿.class::before , after - 가상요소
+a:hover {  //가져다 놨을 때 변화
+	background-color: #000;
+}
+a:active { //눌렀을 때 변화
+	background-color: #000;
+}
+input:focus { //요소에 focus가 되었을 때 (눌렀을 때 등)
+	border-color: #000;
+}
+
+overflow-y : scroll - y축으로 스크롤
+------------------------------------------------------------------
+vh = viewport height
+Box type - display : block , inline , inline-block , flex
+inline - width ,height ,margin-bottom등 사용x
+opacity:100%;
+content 필수
+clear - float를 해결하는 방법 ex) clear:left , right , both
+clear은 display:block 한테만 사용가능
+data-이름 : html의 있는 곳을 가르키기 위해 사용되기도함
+ex) data-link="#home" - data-link는 #home 이라는곳을 가르킴
+
+position - static , relative , absolute , fixed
+
+-기준점-
+static - 기존상태
+relative - 본래의 자리
+absolute - display가 block으로 바뀜 , 부모를 선택할 수 있음 position이 static이 아닌것만 가능
+fixed - viewport 사이즈에 기준이 되어있음 스크롤을 내려도 viewport에 계속 따라다님
+z-index : 1 , 2 레벨
+
+Flexbox - 1. display: flex;
+	  2. 정렬하고자 하는 요소의 부모에게 display flex를 해야함.
+	  3. flex-direction : row row-reverse column column-reverse 가로정렬 세로정렬 
+	     row-reverse - (가로정렬 오른쪽-왼쪽)
+	     column-reverse - (세로 정렬 아래에서 위로 정렬)
+	  4. flex-wrap : nowrap , wrap ; 
+		nowrap - 한 줄에 다 정렬하는 것
+		wrap - 한 줄에 모두 정렬하기에 공간이 넉넉하지 않으면 여러 줄을 만들어서 정렬
+	  5. justify-content : center , flex-start , flex-end , space-between , space-around   
+	      main axis의 - Flexbox 안에있는 block들을 정렬할 때 사용 
+	     space-between : block안에 사이에 간격을 동일하게 정렬
+	     space-around : block 좌우 간격을 동일하게 정렬
+	  6. align-items - 하나의 cross axis의 정렬
+	  7. align-content - 두개의 corss axis의 정렬 : 전체를 기준
+	  8. order:1 - block의 순서를 정해줄 수 있음
+	  9. flex-grow , flex-shrink: 0;
+	 10. flex-basis : flex 의 차지 비율 40% 60% 등
+
+Medua Query - HTML의 meta viewport 태그 선언
+	      @media screen and (min,max-width:768px){
+		min 768px부터
+		max 768px아래
+		}
+
+Typography - 
+1.	font-size - 글자크기
+	px em rem - 단위
+	px - 절대 단위
+	em rem - 상대단위
+	em : 16px = 1em 이고 부모의 사이즈를 1em으로 함
+	ex) parent 8em = 128px , child 0.5em = 64px
+	rem = 16px = 1rem 절대적인것임
+	ex) parent 8rem : 16px*8 =128px , child 0.5rem : 16px*0.5 = 8px  
+
+2.	line-height - 줄 간격 - 기본단위 em 생략가능
+	line-height - 글씨가 줄 간격의 가운대에 배치됨
+
+3.	letter-spacing - 글자와 글자사이의 자간 em 많이 사용 생략x
+	-.03em = -3%
+
+4.	font-family - 폰트 서체
+	font-family - "Poppins" , "Roboto" , sans-serif;
+	- Poppins 서체를 사용 없으면 Roboto 를 사용 그것도 없으면 아무서체나 사용
+
+5.	font-weight - 글씨 굵기 100단위
+	Regular size - 400
+	Bold - 700
+
+6.	color - 글씨의 색상
+		hex , rgb , rgba
+	hex - #0066ff 
+	rgb - rgb(0,101,255)
+	rgb - rgb(0,101,255,투명도) 투명도 1 - 불투명 , 0 - 투명 
+		
+7.	text-align - 글자 정렬
+	text-indent - 들여쓰기 100px;
+	text-transform - 텍스트 변환 
+	none : 기본
+	capitalize : 단어의 앞자 대문자 
+	uppercase : 전부 대문자
+	lowercase : 전부 소문자
+
+8.	text-decoration  
+	none : 밑줄 없애기 
+	underline : 밑줄 
+	line-through : 가운대 줄
+	overline : 위에 줄
+
+9.	font-style - 
+	italic - 기울임	
+
+background-image : url();
+background-repeat:no-repeat; : 반복x
+background-size : contain , cover , custom
+		  contain - 전체 이미지 들어가는 것
+		  cover - 사이즈의 사진의 부분만 들어가는 것
+		  custom - 자체적으로 명시하는것 ex) 100% auto
+background-position : center center; or 40% 12px; 
+			x	y 
+
+property-detail dd span:last-child::after 
+{	
+	content:'';
+
+}
+		   span에 있는 마지막 요소의 뒤에 가상요소
+ 
+cursor: pointer; 누르는 포인터
+
+Transition - property , duration , 
+	   - [timing-function] , [delay] 생략가능
+property : 속성
+duration : 지속시간 1000ms = 1s (ms, s)
+transition :property duration timing-function delay; 
+transition : font-size(바꾸고 싶은 것) 2500ms ;
+	     전부 바꾸고 싶으면 all
+	     font-size 1000ms , background-color:#fff , 2000ms ; 두개의 transition 설정
+timing-function : cubic-bezier , ease-in , ease-out
+delay : 몇초 후 바뀔 수 있는 속성
+
+animation - name(@keyframes) , duration , timing-fuction , delay , iteration-count (정수 , infinite 무한대) , direction(arternete)
+iteration-count - 몇 번 반복
+direction - 방향
+@keyframes name { 		
+    from { 			
+				
+    }				
+    to { 				
+        
+    }				
+}
+				
+@keyframes name { 
+    0% { 
+
+    }
+    50% { 
+
+    }
+    100%{ 
+        
+    }
+}
+
+box-shadow : h-offset  v-offset  blur     spread       color 
+
+	       x         y     흐린정도  그림자사이즈   색상
+
+overflow : visible , auto , scroll ,hidden  
+	  기본값			    지정된 만큼만 보여짐
+auto = scroll 비슷
+
+transform : translate(x,y) ,  scale(x,y),(2) = 2배 , rotate(45deg) = 45도 돈다
+		방향		사이즈			각도
+
+Vilibility :   visible ,  hidden
+		보임 	  안보임
+
+Grid : container , column , gutter
+
+container : Grid가 선택된 전체 영역
+column : 한칸의 범위
+gutter : column의 (양)옆의 간격
+
+------------------------------------------------------------------------------------------
+ - Reset CSS -
+color:inherit - 부모에게 색을 상속받는다.
+
+
+/* Reset CSS */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button,input,textarea{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+}
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active{
+    box-shadow: none;
+    outline: none; 
+    /* outline 요기 아니면 안씀 */
+}
+
+ul,ol,li{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* >= 768px (Desktop) */ 데스크탑 : 768px부터
+@media screen and(min-width:768px){
+   p{
+    font-size : 22px;
+    line-height :1.3636363636;
+   }
+}
+
+/* Custom Grid System - Fix container width */ 최대사이즈 설정
+@media screen and (min-width: 1200px)
+{
+    .container{
+        max-width: 960px !important;
+    }
+}
+
+
